@@ -175,7 +175,7 @@ def set_context(
             e.TID = tenant.get('Id')
             e.TENANT = tenant.get('Name')
             e.AID = account.get('Id')
-            e.AWSID = account.get('AWSId')
+            e.PROVIDERID = account.get('ProviderId')
             e.ACCOUNT_REGION = account.get('Region')
             e.PID = product.get('Id')
             e.PRODUCT_REGION = product.get('Region')
@@ -231,5 +231,5 @@ def set_context(
             e.AWS_DEFAULT_PROFILE = e.ACCOUNT
         if e.AID and e.AID in available_profiles:
             e.AWS_DEFAULT_PROFILE = e.AID
-        if e.AWSID and e.AWSID in available_profiles:
-            e.AWS_DEFAULT_PROFILE = e.AWSID
+        if e.PROVIDERID and e.PROVIDERID in available_profiles:
+            e.AWS_DEFAULT_PROFILE = e.PROVIDERID
